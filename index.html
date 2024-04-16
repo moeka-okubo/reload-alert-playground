@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リロード挙動確認</title>
+</head>
+<body style="margin: 40px 16px;">
+  <p>表示確認用テスト</p>
+  <script>
+    if (sessionStorage.getItem("isReloaded")) {
+      alert('リロード後に表示されるダイアログ');
+    }
+
+    sessionStorage.setItem("isReloaded", true);
+    </script>
+</body>
+</html>
