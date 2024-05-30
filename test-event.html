@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">タッチ対応の例</title>
+    <title>タッチ対応の例</title>
     <style>
         #movable {
             width: 100px;
@@ -16,7 +16,8 @@
     </style>
 </head>
 <body>
-    <input type="button" value="動かす" id="moveButton" onclick="clickElement()">
+    <h1 id="title">イベントテスト</h1>
+    <input type="text" value="動かす" id="moveButton" onclick="clickElement()">
     <div id="movable"></div>
 
     <script>
@@ -25,9 +26,9 @@
         const title = document.getElementById('title');
 
         function clickElement() {
-            // // ここに要素を動かす処理を記述
-            // movable.style.top = '200px';
-            // movable.style.left = '200px';
+            // ここに要素を動かす処理を記述
+            movable.style.top = '200px';
+            movable.style.left = '200px';
             title.innerHTML="clickElement()が発動した"
         }
 
