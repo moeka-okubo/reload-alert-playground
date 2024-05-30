@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">タッチ対応の例</title>
+    <style>
+        #movable {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="動かす" id="moveButton" onclick="clickElement()">
+    <div id="movable"></div>
+
+    <script>
+        const moveButton = document.getElementById('moveButton');
+        const movable = document.getElementById('movable');
+        const title = document.getElementById('title');
+
+        function clickElement() {
+            // // ここに要素を動かす処理を記述
+            // movable.style.top = '200px';
+            // movable.style.left = '200px';
+            title.innerHTML="clickElement()が発動した"
+        }
+
+        function touchElement() {
+          title.innerHTML = "touchElement()が発動した"
+        }
+
+        // タッチイベントの追加
+        moveButton.addEventListener('touchstart', touchElement);
+
+    </script>
+</body>
+</html>
